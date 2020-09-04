@@ -72,3 +72,11 @@ then
 else
         echo "password must contain atleast a number, capital letter and 8 characters"
 fi
+
+read -p "Enter the password checking for rule3 : " pass4
+if [[ ${#pass4} -ge 8 && "$pass4" == *[A-Z]* && "$pass4" == *[a-z]* && $pass4 == *[0-9]* && $pass4 == *[@$%^&_*]* ]]
+then
+        echo "password rule3 is valid "
+else
+        echo "password must contain atleast a number, capital letter and 8 characters"
+fi
