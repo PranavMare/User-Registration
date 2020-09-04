@@ -80,3 +80,16 @@ then
 else
         echo "password must contain atleast a number, capital letter and 8 characters"
 fi
+
+#use cases to test sample emaail
+
+read -p "Enter the sample emails to test : " emailtest
+
+emailtest_regex=^[a-zA-Z][a-zA-Z0-9]+[.*+-]*@[a-z0-9]+[.][a-z]{2,}[.]*[a-z]*
+
+if [[ $emailtest =~ $email_regex ]]
+then
+    echo "email is valid"
+else
+    echo "EMail is invalid"
+fi
